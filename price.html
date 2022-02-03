@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Page title</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&family=Poppins:ital,wght@1,200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav-wrapper">
+            <div class="left-side">
+                <div class="nav-link-wrapper active -nav.link">
+                    <a href="index.html">Home</a>
+                </div>
+
+                <div class="nav-link-wrapper">
+                    <a href="price.html">price</a>
+                </div>
+                
+                <div class="nav-link-wrapper">
+                    <a href="about.html">about</a>
+                </div>
+
+                
+            </div>
+
+            <div class="right-side">
+                <div class="brand">
+                    <div>William Petersen</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pro-wrapper">
+            <div class="one-column-wrapper">
+
+                <div class="pro-wrapper">
+                    <h1> Our products </h1>
+                    <p>Special offer for students</p>         
+                    
+
+                </div>
+            </div>
+       
+        </div>
+
+        <div class="content-wrapper">
+            <div class="portfolio-items-wrapper">
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image: url(images/pack1.png);"></div>
+
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <img src="images/logo/ant.png">
+                        </div>
+
+                        <div class="subtitle">
+                            Basic - 7.500 DKK
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image: url(images/pack2.png);"></div>
+
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <img src="images/logo/ant.png">
+                        </div>
+
+                        <div class="subtitle">
+                            Standard - 10.000 DKK
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image: url(images/pack3.png);"></div>
+
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <img src="images/logo/ant.png">
+                        </div>
+
+                        <div class="subtitle">
+                            Business - 15.000 DKK
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image: url(images/pack4.png);"></div>
+
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <img src="images/logo/ant.png">
+                        </div>
+
+                        <div class="subtitle">
+                            custom - Please Call
+                        </div>
+
+                    </div>
+                </div>
+
+                 
+
+            </div>
+        </div>
+
+    <div class="form-text-wrapper">
+        <div class="one-column-wrapper">
+
+            <div class="form-text-wrapper">
+                <h1> Call now or full the form and get offer </h1>
+                <p>we will answer you as son as possible</p>         
+
+            </div>
+        </div>
+
+        <div class="container-form">
+            <form action="action_page.php">
+          
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+          
+              <label for="country">Country</label>
+              <select id="country" name="country">
+                <option value="Denmark">Denmark</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+              </select>
+          
+              <label for="subject">Subject</label>
+              <textarea id="subject" name="subject" placeholder="please make sure you have CPR number" style="height:200px"></textarea>
+          
+              <input type="submit" value="Submit">
+          
+            </form>
+          </div>
+
+
+       
+
+    </div>
+
+<footer>
+    <p>Ant Text<br>
+    <p> 21 13 06 03</p>
+    <p>Rosenørns Alle 31, 2. sal, 1970 Frederiksberg<br>
+    
+    <a href="https://www.google.com/maps/place/Ant+Text/@55.6822498,12.5484445,17z/data=!3m1!4b1!4m5!3m4!1s0x46525051ed3aaaab:0xf5cb7889d7d3b06c!8m2!3d55.6822498!4d12.5506332">Directions</a></p>
+</footer>  
+</body>
+<script>
+    const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper')
+
+    portfolioItems.forEach(portfolioItem => {
+        portfolioItem.addEventListener('mouseover', () => {
+            console.log(portfolioItem.childNodes[1].classList);
+            portfolioItem.childNodes[1].classList.add('img-darken');
+            
+        })
+
+        
+        portfolioItem.addEventListener('mouseout', () => {
+            
+            portfolioItem.childNodes[1].classList.remove('img-darken');
+            
+        })
+
+    })
+</script>
+</html>
